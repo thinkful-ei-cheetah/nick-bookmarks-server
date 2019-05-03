@@ -7,31 +7,28 @@ const cors = require('cors');
 const corsOptions = require('./cors-whitelist');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
+const validateBearerToken = require('./validateBearerToken');
+const errorHandler = require('./error-handler');
+const bookmarksRouter = require('./Routers/bookmarks-router');
 
 const app = express();
-app.use(express.json());
 
-const morganOption = (NODE_ENV === 'production')
-  ? 'tiny'
-  : 'dev';
+const morganOption = ((NODE_ENV === 'production') ? 'tiny' : 'dev', {
+  skip: () => NODE_ENV === 'test'
+});
 
 app.use(morgan(morganOption));
 app.use(cors({origin: corsOptions}));
 app.use(helmet());
 
+app.use(validateBearerToken);
+
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.send('Nick\'s Bookmarks Server!');
 });
 
-app.use(function errorHandler(error, req, res, next) {
-  let response;
-  if(NODE_ENV === 'production') {
-    response = { error: { message: 'server error' } };
-  } else {
-    console.error(error);
-    response = { message: error.message, error };
-  }
-  res.status(500).json(response);
-});
+app.use(bookmarksRouter);
+
+app.use(errorHandler);
 
 module.exports = app;
