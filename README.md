@@ -1,6 +1,6 @@
 # Bookmarks Server
 
-This is an locally based server used to C.R.U.D. URL bookmarks.
+This is a locally based server used to C.R.U.D. URL bookmarks.
 
 *Note: Data is not persistent as a database is not hooked up, yet.. with the exception of **hard-coded** store*
 
