@@ -1,4 +1,4 @@
-# Bookmarks Server
+# Bookmarks Server - Without Database
 
 This is a locally based server used to C.R.U.D. URL bookmarks.
 
