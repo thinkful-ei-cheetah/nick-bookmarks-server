@@ -1,0 +1,22 @@
+INSERT INTO bookmarks (title, url, "desc", rating)
+VALUES
+  ('Sample Bookmark 1',   'https://www.sample.org', 'Sample Bookmark One description text',       4),
+  ('Sample Bookmark 2',   'https://www.sample.org', 'Sample Bookmark Two description text',       5),
+  ('Sample Bookmark 3',   'https://www.sample.org', 'Sample Bookmark Three description text',     1),
+  ('Sample Bookmark 4',   'https://www.sample.org', 'Sample Bookmark Four description text',      3),
+  ('Sample Bookmark 5',   'https://www.sample.org', 'Sample Bookmark Five description text',      4),
+  ('Sample Bookmark 6',   'https://www.sample.org', 'Sample Bookmark Six description text',       2),
+  ('Sample Bookmark 7',   'https://www.sample.org', 'Sample Bookmark Seven description text',     1),
+  ('Sample Bookmark 8',   'https://www.sample.org', 'Sample Bookmark Eight description text',     3),
+  ('Sample Bookmark 9',   'https://www.sample.org', 'Sample Bookmark Nine description text',      5),
+  ('Sample Bookmark 10',  'https://www.sample.org', 'Sample Bookmark Ten description text',       5),
+  ('Sample Bookmark 11',  'https://www.sample.org', 'Sample Bookmark Eleven description text',    2),
+  ('Sample Bookmark 12',  'https://www.sample.org', 'Sample Bookmark Twelve description text',    1),
+  ('Sample Bookmark 13',  'https://www.sample.org', 'Sample Bookmark Thirteen description text',  3),
+  ('Sample Bookmark 14',  'https://www.sample.org', 'Sample Bookmark Fourteen description text',  3),
+  ('Sample Bookmark 15',  'https://www.sample.org', 'Sample Bookmark Fifteen description text',   4),
+  ('Sample Bookmark 16',  'https://www.sample.org', 'Sample Bookmark Sixteen description text',   4),
+  ('Sample Bookmark 17',  'https://www.sample.org', 'Sample Bookmark Seventeen description text', 3),
+  ('Sample Bookmark 18',  'https://www.sample.org', 'Sample Bookmark Eighteen description text',  4),
+  ('Sample Bookmark 19',  'https://www.sample.org', 'Sample Bookmark Nineteen description text',  1),
+  ('Sample Bookmark 20',  'https://www.sample.org', 'Sample Bookmark Twenty description text',    4);
