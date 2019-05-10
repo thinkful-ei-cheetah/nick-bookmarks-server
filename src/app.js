@@ -11,18 +11,16 @@ const bookmarksRouter = require('./Routers/bookmarks-router')
 
 const app = express()
 
-const morganOption = ((NODE_ENV === 'production') ? 'tiny' : 'dev', {
-  skip: () => NODE_ENV === 'test'
-})
+const morganOption = NODE_ENV === 'production' ? 'tiny' : 'dev'
 
 app.use(morgan(morganOption))
-app.use(cors({origin: corsOptions}))
+app.use(cors({ origin: corsOptions }))
 app.use(helmet())
 
 app.use(validateBearerToken)
 
 app.get('/', (req, res) => {
-  res.send('Nick\'s Bookmarks Server!')
+  res.send("Nick's Bookmarks Server!")
 })
 
 app.use(bookmarksRouter)
