@@ -33,6 +33,7 @@ function makeBookmarksArray() {
 
 function makeMaliciousBookmarks() {
   const maliciousBookmark = {
+    id: 123,
     title: 'Naughty naughty very naughty <script>alert("xss");</script>',
     url: 'https://naughty.url.com/<script>alert("xss");</script>',
     desc: `Bad image <img src="https://url.to.file.which/does-not.exist" onerror="alert(document.cookie);">. But not <strong>all</strong> bad.`,
@@ -40,6 +41,7 @@ function makeMaliciousBookmarks() {
   }
 
   const sanitizedBookmark = {
+    id: 123,
     title:
       'Naughty naughty very naughty &lt;script&gt;alert("xss");&lt;/script&gt;',
     url: 'https://naughty.url.com/&lt;script&gt;alert("xss");&lt;/script&gt;',

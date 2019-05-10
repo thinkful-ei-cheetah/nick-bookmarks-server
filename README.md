@@ -14,6 +14,7 @@ Complete the following steps to locally configure the server:
    *Ex (postgresql):*
    ```
    $ createdb -U <username> -d <database_name>
+   $ npm run migrate
    $ psql -d <database_name> -f /path/to/seed/file
    ```
 5. Set up environment in `.env` including `API_TOKEN`, `PORT`, and database configurations: 
