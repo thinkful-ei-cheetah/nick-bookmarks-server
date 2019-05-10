@@ -75,4 +75,32 @@ describe.only('Bookmarks Endpoints', () => {
       })
     })
   })
+
+  describe('POST /bookmarks', () => {
+    it('creates a bookmark, responding with 201 and the new bookmark', () => {
+      const newBookmark = {
+        title: 'Test New Bookmark',
+        url: 'https://www.test-bkmk.org',
+        desc: 'Test Bookmark descriptin text...'
+      }
+      return supertest(app)
+        .post('/bookmarks')
+        .set('Authorization', 'Bearer ' + API_TOKEN)
+        .send(newBookmark)
+        .expect(201)
+        .expect(res => {
+          expect(res.body.title).to.eql(newBookmark.title)
+          expect(res.body.url).to.eql(newBookmark.url)
+          expect(res.body.desc).to.eql(newBookmark.desc)
+          expect(res.body).to.have.property('rating')
+          expect(res.body).to.have.property('id')
+        })
+        .then(postRes =>
+          supertest(app)
+            .get(`/bookmarks/${postRes.body.id}`)
+            .set('Authorization', 'Bearer ' + API_TOKEN)
+            .expect(postRes.body)
+        )
+    })
+  })
 })
