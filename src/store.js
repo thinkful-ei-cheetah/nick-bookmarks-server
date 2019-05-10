@@ -1,5 +1,3 @@
-'use strict';
-
 const bookmarks = [
   {
     id: '1',
@@ -29,6 +27,6 @@ const bookmarks = [
     desc: 'Sample Bookmark description text.',
     rating: 1
   }
-];
+]
 
-module.exports = bookmarks;
+module.exports = bookmarks
