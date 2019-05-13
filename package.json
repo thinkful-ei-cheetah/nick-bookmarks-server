@@ -38,7 +38,13 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
+    "eslint-config-mocha": "0.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-mocha-only": "0.0.3",
     "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.0",
     "postgrator-cli": "^3.1.0",
